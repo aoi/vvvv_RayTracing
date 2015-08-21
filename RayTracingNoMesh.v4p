@@ -1,0 +1,195 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\workspace\vvvv\RayTracing\RayTracingNoMesh.v4p" systemname="RayTracingNoMesh" filename="C:\workspace\vvvv\RayTracingNoMesh.v4p">
+   <BOUNDS type="Window" left="1695" top="1845" width="11460" height="11550">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
+   <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="24">
+   <BOUNDS type="Node" left="2265" top="3990" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2265" top="3990" width="6720" height="5880">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5130" top="7425" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Grid (EX9.Geometry)" nodename="Grid (EX9.Geometry)" componentmode="Hidden" id="22">
+   <BOUNDS type="Node" left="405" top="2460" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1">
+   </PIN>
+   <PIN pinname="Resolution X" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="21" systemname="IOBox (Color)">
+   <BOUNDS type="Box" left="2355" top="705" width="2250" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2355" top="705" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="2" values="|0.01288,0.31937,1.00000,1.00000|,|1.00000,0.33070,0.01306,1.00000|">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Color">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <NODE systemname="Transform (Transform 3d Vector)" nodename="Transform (Transform 3d Vector)" componentmode="Hidden" id="19">
+   <BOUNDS type="Node" left="1095" top="2100" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Scale XYZ" slicecount="3" values="1,1,1">
+   </PIN>
+   <PIN pinname="Translate XYZ" slicecount="3" values="0,0,0">
+   </PIN>
+   </NODE>
+   <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="1080" top="1560" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="18" srcpinname="Transform Out" dstnodeid="19" dstpinname="Transform In">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5925" top="1815" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5925" top="1815" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" values="2.12,4.45,4.42">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Light direction XYZ|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="3" values="0.177000001072884,0.177000001072884,0.177000001072884">
+   </PIN>
+   </NODE>
+   <NODE id="23" systemname="RayTracing03 (EX9.Effect)" filename="effects\RayTracing03.fx" nodename="RayTracing03 (EX9.Effect)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="2265" top="3195" width="3555" height="270">
+   </BOUNDS>
+   <PIN pinname="Mesh" visible="1" pintype="Input">
+   </PIN>
+   <PIN pinname="Layer" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Select Next Valid Technique" pintype="Configuration" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Render State" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Transform" pintype="Input" visible="1">
+   </PIN>
+   <PIN pinname="Texture" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Transform" pintype="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Technique" pintype="Input" visible="1" slicecount="1" values="| TSimpleShader|">
+   </PIN>
+   <PIN pinname="Technique Pass" pintype="Input" visible="1" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Space" pintype="Input" slicecount="1" values="World">
+   </PIN>
+   <PIN pinname="Enabled" pintype="Input" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Compiled" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Technique Valid" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="Description" pintype="Output" visible="1">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   <PIN pinname="Ray Origin XYZ" visible="1" pintype="Input" slicecount="3" values="0.09,0.4,-1.2">
+   </PIN>
+   <PIN pinname="Light Direction XYZ" visible="1" pintype="Input" slicecount="1" values="0.007">
+   </PIN>
+   <PIN pinname="Color" pintype="Input" visible="1" slicecount="2" values="|0.00000,0.00000,0.00000,0.00000|,|0.00000,0.00000,0.00000,0.00000|">
+   </PIN>
+   <PIN pinname="LDR XYZ" slicecount="1" values="0.577000021934509">
+   </PIN>
+   <PIN pinname="Sphere position XYZ" visible="1" slicecount="3" values="0">
+   </PIN>
+   <PIN pinname="f XYZ" visible="1" slicecount="6" values="0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="Sphere Position XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="Layer" dstnodeid="24" dstpinname="Layers">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Color Output" dstnodeid="23" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Mesh" dstnodeid="23" dstpinname="Mesh">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Transform Out" dstnodeid="23" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="3915" top="1695" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" values="0.77">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" values="-0.11">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="-1.07">
+   </PIN>
+   </NODE>
+   <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="3915" top="2520" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="XYZ" dstnodeid="29" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Output" dstnodeid="23" dstpinname="Sphere position XYZ">
+   </LINK>
+   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="30">
+   <BOUNDS type="Node" left="4350" top="2040" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" values="-0.16">
+   </PIN>
+   <PIN pinname="Z" slicecount="1" values="-1.2">
+   </PIN>
+   <PIN pinname="X" slicecount="1" values="0.09">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="30" srcpinname="XYZ" dstnodeid="29" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Light Direction XYZ">
+   </LINK>
+   <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="32">
+   <BOUNDS type="Node" left="3075" top="2115" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Z" slicecount="1" values="2.39">
+   </PIN>
+   <PIN pinname="Y" slicecount="1" values="-0.48">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="XYZ" dstnodeid="23" dstpinname="Ray Origin XYZ">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Output" dstnodeid="23" dstpinname="Sphere Position XYZ">
+   </LINK>
+   </PATCH>
